@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 템플릿 작업 페이지 </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="toolbar">
+        <select id="font-selector">
+          <option value="Noto Sans KR">Noto Sans KR</option>
+          <option value="Roboto">Roboto</option>
+          <option value="Arial">Arial</option>
+        </select>
+
+        <select id="font-size-selector">
+            <option value="12px">12px</option>
+            <option value="14px">14px</option>
+            <option value="16px">16px</option>
+            <option value="18px">18px</option>
+            <option value="20px">20px</option>
+        </select>
+    </div>
+
+    <div id="template-section">
+        <!-- 템플릿 썸네일 위치 -->
+        <div class="template-thumbnail" onclick="loadTemplate(this)">
+            <img src="ThumbnailEX1.png" alt="템플릿 1" />
+        </div>
+        <div class="template-thumbnail" onclick="loadTemplate(this)">
+            <img src="ThumbnailEX2.png" alt="템플릿 2" />
+        </div>
+        <div class="template-thumbnail" onclick="loadTemplate(this)">
+            <img src="ThumbnailEX3.png" alt="템플릿 3" />
+        </div>
+        <div class="template-thumbnail" onclick="loadTemplate(this)">
+            <img src="ThumbnailEX4.png" alt="템플릿 4" />
+        </div>
+    </div>
+
+    <div id="editor-section" contenteditable="true">
+        <!-- 선택된 템플릿 로드, 사용자 편집 가능(권한 부여) -->
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

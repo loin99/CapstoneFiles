@@ -1,0 +1,77 @@
+/* 전체 레이아웃 스타일링 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+    display: flex; /* body에 flex를 적용하여 내부 요소들을 행으로 배치 */
+}
+
+/* 툴바 스타일링 */
+#toolbar {
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 10px;
+    position: fixed; /* 툴바를 상단에 고정 */
+    width: 100%; /* 툴바의 너비를 화면 전체로 설정 */
+    z-index: 1000; /* 툴바가 다른 요소들 위에 표시되도록 z-index를 설정 */
+  }
+
+#toolbar select {
+    margin-right: 10px;
+}
+
+/* 사이드바 (#template-section) 스타일링 */
+#template-section {
+    background-color: #f7f7f7;  /* 사이드바 배경색 */
+    border-right: 1px solid #e1e1e1;    /* 사이드바 우측 경계선 */
+    padding: 20px;  /* 내부 여백 */
+    overflow-y: auto;   /* 세로 스크롤 */
+    width: auto; /* 사이드바 너비 설정 */
+    max-width: 200px;
+    height: calc(100% - 42px); /* 툴바 높이를 빼고 사이드바 높이를 설정 */
+    margin-top: 42px; /* 툴바 아래로 사이드바를 배치 */
+}
+
+#template-section h2 {
+    margin-bottom: 15px;    /* 제목 아래 여백 */
+    font-size: 18px;    /* 제목 폰트 크기 */
+    color: #333; /* 제목 색상 */
+}
+
+.template-thumbnail {
+    width: 100px;    /* 썸네일 너비 */
+    margin-bottom: 10px;    /* 썸네일 간 여백 */
+    cursor: pointer;    /* 마우스 오버 시 포인터 */
+    display: block; /* 썸네일을 블록 요소로 만들어 줄바꿈을 추가 */
+    margin-left: auto; /* 썸네일을 중앙 정렬하기 위해 추가 */
+    margin-right: auto; /* 썸네일을 중앙 정렬하기 위해 추가 */
+    text-align: center; /* 이미지를 중앙 정렬하기 위해 추가 */
+}
+
+.template-thumbnail img {
+    width: 100%; /* 이미지를 썸네일 크기에 맞춤 */
+    height: auto; /* 이미지를 썸네일 크기에 맞춤 */
+    border-radius: 10px; /* 이미지 모서리를 둥글게 처리 */
+    display: inline-block; /* 이미지를 인라인-블록 요소로 만들어 중앙 정렬이 가능하게 함 */
+    margin-bottom: 10px; /* 이미지 간 하단 여백 */
+  }
+
+/* 메인 편집 공간 (#editor-section) 스타일링 */
+#editor-section {
+    background-color: #fff; /* 편집 공간 배경색 */
+    padding: 20px;  /* 내부 여백 */
+    overflow-y: auto;   /* 세로 스크롤 */
+    width: (100% - 200px); /* 편집 구역의 너비를 전체의 80%로 설정 */
+    height: calc(100% - 42px); /* 툴바 높이를 빼고 편집 구역 높이를 설정 */
+    margin-top: 42px; /* 툴바 아래로 편집 구역을 배치 */
+}
+
+#editor-section:focus {
+    outline: none;  /* 편집 영역 포커스 시 테두리 제거 */
+}
